@@ -1,15 +1,12 @@
 package com.vaadin.designer.springnavigation;
 
-import javax.servlet.annotation.WebServlet;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 
 import com.vaadin.annotations.Theme;
-import com.vaadin.annotations.VaadinServletConfiguration;
 import com.vaadin.server.VaadinRequest;
-import com.vaadin.server.VaadinServlet;
 import com.vaadin.spring.annotation.SpringUI;
+import com.vaadin.spring.navigator.SpringNavigator;
 import com.vaadin.ui.UI;
 import com.vaadin.ui.declarative.Design;
 
@@ -43,10 +40,5 @@ public class MyUI extends UI {
 		if (getNavigator().getState().isEmpty()) {
 			getNavigator().navigateTo(UserView.VIEW_NAME);
 		}
-	}
-
-	@WebServlet(urlPatterns = "/*", name = "MyUIServlet", asyncSupported = true)
-	@VaadinServletConfiguration(ui = MyUI.class, productionMode = false)
-	public static class MyUIServlet extends VaadinServlet {
 	}
 }
