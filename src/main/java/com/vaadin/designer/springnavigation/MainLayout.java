@@ -19,5 +19,6 @@ public class MainLayout extends MainLayoutDesign {
 	@PostConstruct
 	public void init() {
 		userButton.addClickListener(event -> getUI().getNavigator().navigateTo(UserView.VIEW_NAME));
+		statusButton.addClickListener(event -> getUI().getNavigator().navigateTo(StatusView.VIEW_NAME));
 	}
 }
