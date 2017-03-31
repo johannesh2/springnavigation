@@ -9,7 +9,6 @@ import com.vaadin.spring.annotation.UIScope;
 
 @SpringComponent
 @UIScope
-@DependsOn("MyComponentFactory")
 public class MainLayout extends MainLayoutDesign {
 
 	public MainLayout() {

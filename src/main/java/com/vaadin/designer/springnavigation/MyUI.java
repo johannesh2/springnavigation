@@ -23,18 +23,15 @@ import com.vaadin.ui.declarative.Design;
 @SpringUI
 public class MyUI extends UI {
 
-	private final MyComponentFactory componentFactory;
 	private final ApplicationContext appContext;
 
 	@Autowired
-	public MyUI(MyComponentFactory componentFactory, ApplicationContext appContext) {
+	public MyUI(ApplicationContext appContext) {
 		this.appContext = appContext;
-		this.componentFactory = componentFactory;
 	}
 
 	@Override
 	protected void init(VaadinRequest vaadinRequest) {
-		Design.setComponentFactory(componentFactory);
 		setContent(appContext.getBean(MainLayout.class));
 
 		if (getNavigator().getState().isEmpty()) {
