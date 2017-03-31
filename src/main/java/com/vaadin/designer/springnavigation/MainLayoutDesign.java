@@ -6,6 +6,7 @@ import com.vaadin.ui.Button;
 import com.vaadin.ui.CssLayout;
 import com.vaadin.ui.HorizontalLayout;
 import com.vaadin.ui.Label;
+import com.vaadin.ui.Panel;
 import com.vaadin.ui.declarative.Design;
 
 /** 
@@ -30,6 +31,7 @@ public class MainLayoutDesign extends HorizontalLayout {
 	protected Button archiveButton;
 	protected Button settingsButton;
 	protected Button logoutButton;
+	protected Panel content;
 
 	public MainLayoutDesign() {
 		Design.read(this);
